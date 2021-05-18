@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="312.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.StudentController">
+   <children>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="230.0" text="Student " textFill="#1323b4" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="97.0" layoutY="73.0" prefHeight="213.0" prefWidth="275.0" spacing="10.0">
+         <children>
+            <Button fx:id="programHistoryButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#programHistoryButtonOnAction" text="Course History" />
+            <Button fx:id="FlyingHoursHistoryButton" mnemonicParsing="false" onAction="#FlyingHoursHistoryButtonOnAction" text="Flying Hour History" />
+            <Button fx:id="CourseMaterialButton" mnemonicParsing="false" onAction="#CourseMaterialButtonOnAction" text="Course Material" />
+            <Button fx:id="instructorEvalationButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#instructorEvalationButtonOnAction" text="Instructor Evaluation" />
+            <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#reportsButtonOnAction" text="Reports" />
+         </children>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </VBox>
+      <Button layoutX="22.0" layoutY="274.0" mnemonicParsing="false" onAction="#backMainOnClick" text="Back to Home" />
+   </children>
+</AnchorPane>

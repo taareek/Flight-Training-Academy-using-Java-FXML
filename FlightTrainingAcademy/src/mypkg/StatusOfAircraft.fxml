@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.StatusOfAircraftController">
+   <children>
+      <Text layoutX="229.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status Of Aircraft ">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <TableView layoutX="11.0" layoutY="84.0" prefHeight="200.0" prefWidth="581.0">
+        <columns>
+          <TableColumn prefWidth="133.99996948242188" text="Model No" />
+          <TableColumn prefWidth="139.3333740234375" text="Aircraft Name" />
+            <TableColumn onEditCommit="#changeReadyToFlyCellEvent" prefWidth="94.66668701171875" text="Ready To Fly" />
+            <TableColumn minWidth="6.6666259765625" onEditCommit="#changeNeedToMaintenanceCellEvent" prefWidth="161.33331298828125" text="Need To Maintenance" />
+        </columns>
+      </TableView>
+      <HBox layoutX="15.0" layoutY="292.0" prefHeight="44.0" prefWidth="581.0" spacing="10.0">
+         <children>
+            <TextField fx:id="modelNameTextField" prefHeight="25.0" prefWidth="165.0" promptText="Enter model name" />
+            <TextField fx:id="aircraftNameTextField" prefHeight="25.0" prefWidth="143.0" promptText="Enter aircraft name" />
+            <TextField fx:id="readyToFlyTextField" prefHeight="25.0" prefWidth="98.0" promptText="Ready to fly" />
+            <TextField fx:id="NeedToMaintenance" prefHeight="25.0" prefWidth="142.0" promptText="Need maintenance" />
+         </children>
+      </HBox>
+      <Button layoutX="508.0" layoutY="336.0" mnemonicParsing="false" onAction="#addToStatusButtonOnAction" text="Add to status" />
+      <HBox layoutX="7.0" layoutY="381.0" prefHeight="52.0" prefWidth="601.0" spacing="360.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

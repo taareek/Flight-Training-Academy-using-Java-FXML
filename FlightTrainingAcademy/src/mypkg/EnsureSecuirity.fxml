@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.EnsureSecuirityController">
+   <children>
+      <Text layoutX="218.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ensure Security">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="addIssueButton" layoutX="523.0" layoutY="305.0" mnemonicParsing="false" onAction="#addIssueButtonOnAction" text="Add Issue" />
+      <TableView layoutX="28.0" layoutY="75.0" prefHeight="200.0" prefWidth="563.0">
+        <columns>
+          <TableColumn prefWidth="124.66668128967285" text="Course Issue" />
+          <TableColumn prefWidth="147.33338928222656" text="Aircraft Issue" />
+            <TableColumn prefWidth="138.66668701171875" text="Instructors Issue" />
+            <TableColumn prefWidth="149.33330281575525" text="Other Issue" />
+        </columns>
+      </TableView>
+      <HBox layoutX="19.0" layoutY="369.0" prefHeight="52.0" prefWidth="601.0" spacing="360.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+      <TextArea fx:id="textArea" layoutX="28.0" layoutY="298.0" prefHeight="39.0" prefWidth="489.0" promptText="Enter Your Issues" />
+   </children>
+</AnchorPane>

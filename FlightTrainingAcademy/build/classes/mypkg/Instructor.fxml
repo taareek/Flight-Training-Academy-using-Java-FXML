@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="349.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.InstructorController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="312.0" prefWidth="483.0">
+         <children>
+            <Label alignment="CENTER" layoutX="120.0" layoutY="14.0" prefHeight="50.0" prefWidth="230.0" text="Instructor" textFill="#1323b4" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="43.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="78.0" layoutY="73.0" prefHeight="213.0" prefWidth="294.0" spacing="10.0">
+               <children>
+                  <Button fx:id="takeAttendanceButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#takeAttendanceButtonOnAction" text="Take Attendance" />
+                  <Button fx:id="gradesAndFlyingHoursButton" mnemonicParsing="false" onAction="#gradesAndFlyingHoursButtonOnAction" text="Grades and Flying Hours Submission" />
+                  <Button fx:id="provideCourseMaterialButton" mnemonicParsing="false" onAction="#provideCourseMaterialButtonOnAction" text="Provide Course Material" />
+                  <Button fx:id="setScheduleButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setScheduleButtonOnAction" text="Set Schedule" />
+                  <Button fx:id="viewFeedbackButton" mnemonicParsing="false" onAction="#viewFeedbackButtonOnAction" text="View Feedback" />
+               </children>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button layoutX="32.0" layoutY="284.0" mnemonicParsing="false" onAction="#backToHomeOnAction" text="Bact to Home" />
+   </children>
+</AnchorPane>

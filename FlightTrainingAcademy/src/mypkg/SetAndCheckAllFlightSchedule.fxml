@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.SetAndCheckAllFlightScheduleController">
+   <children>
+      <Text layoutX="113.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set And Check All Flight Schedule">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <TableView layoutX="18.0" layoutY="82.0" prefHeight="159.0" prefWidth="564.0">
+        <columns>
+          <TableColumn prefWidth="174.66668128967285" text="Student Name" />
+          <TableColumn prefWidth="120.00001525878906" text="Date" />
+            <TableColumn prefWidth="76.66668701171875" text="Time" />
+            <TableColumn prefWidth="193.33322143554688" text="Instructor Name" />
+        </columns>
+      </TableView>
+      <HBox layoutX="7.0" layoutY="261.0" prefHeight="61.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <TextField fx:id="studentNameTextField" prefHeight="25.0" prefWidth="126.0" promptText="Student Name" />
+            <DatePicker fx:id="datePicker" promptText="Date" />
+            <TextField fx:id="dateTextField" prefHeight="25.0" prefWidth="74.0" promptText="Time" />
+            <TextField fx:id="InstructorNameTextField" prefHeight="25.0" prefWidth="150.0" promptText="Instructor Name" />
+            <Button fx:id="examScheduleButton" mnemonicParsing="false" onAction="#setScheduleButtonOnAction" text="Set" />
+         </children>
+      </HBox>
+      <HBox layoutX="21.0" layoutY="367.0" prefHeight="25.0" prefWidth="601.0" spacing="360.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

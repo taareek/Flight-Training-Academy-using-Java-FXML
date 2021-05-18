@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.UserLogInPageController">
+   <children>
+      <Text layoutX="84.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User LogIn" />
+      <Text layoutX="85.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your ID: " />
+      <Text layoutX="85.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your Password:" />
+      <TextField fx:id="idTextField" layoutX="240.0" layoutY="62.0" />
+      <TextField fx:id="passwordTextField" layoutX="240.0" layoutY="108.0" />
+      <Button fx:id="userLogInButton" layoutX="87.0" layoutY="200.0" mnemonicParsing="false" onAction="#userLogInButtonOnAction" text="Log In" />
+      <Button fx:id="backToHomeButton" layoutX="84.0" layoutY="247.0" mnemonicParsing="false" onAction="#backToHomeButtonOnAction" text="Back To Home" />
+      <Text layoutX="84.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Your UserType:" />
+      <ComboBox fx:id="comboBox" layoutX="239.0" layoutY="149.0" onAction="#comboBoxOnActon" prefWidth="150.0" />
+   </children>
+</AnchorPane>

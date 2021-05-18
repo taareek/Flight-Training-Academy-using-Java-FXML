@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.DataEntryController">
+   <children>
+      <Text layoutX="224.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Entrey">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the catagory to enter data: " />
+      <ComboBox fx:id="comboBox" layoutX="47.0" layoutY="129.0" onAction="#coboBoxOnAction" prefWidth="150.0" />
+      <HBox layoutX="246.0" layoutY="130.0" prefHeight="139.0" prefWidth="339.0">
+         <children>
+            <VBox prefHeight="153.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Designation:" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name:" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Id:" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Salary:" />
+               </children>
+            </VBox>
+            <VBox prefHeight="139.0" prefWidth="239.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="designationTextField" />
+                  <TextField fx:id="nameTextField" />
+                  <TextField fx:id="idTextField" />
+                  <TextField fx:id="salaryTextField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="531.0" layoutY="277.0" mnemonicParsing="false" onAction="#submitButtonOnClick" text="Submit" />
+      <HBox layoutX="39.0" layoutY="354.0" prefHeight="52.0" prefWidth="601.0" spacing="360.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutBtn" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

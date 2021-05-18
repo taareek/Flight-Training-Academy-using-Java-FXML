@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.HeadOfTrainingController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="20.0" prefHeight="312.0" prefWidth="483.0">
+         <children>
+            <Label alignment="CENTER" layoutX="39.0" layoutY="14.0" prefHeight="64.0" prefWidth="417.0" text="Head Of Training " textFill="#1323b4" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="43.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="97.0" layoutY="73.0" prefHeight="213.0" prefWidth="275.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buildTrainingProgramButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buildTrainingProgramButtonOnAction" text="Build Training Program" />
+                  <Button fx:id="flightScheduleButton" mnemonicParsing="false" onAction="#flightScheduleButtonOnAction" text="Flight Schedule" />
+                  <Button fx:id="stdprogressAndFeedbackButton" mnemonicParsing="false" onAction="#stdprogressAndFeedbackButtonOnAction" text="Student Training Progress" />
+                  <Button fx:id="ensureSecuirityButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ensureSecuirityButtonOnAction" text="Ensure Secuirity" />
+                  <Button fx:id="evaluateFacultyButton" mnemonicParsing="false" onAction="#evaluateFacultyButtonOnAction" text="Instructor Performance" />
+               </children>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </VBox>
+            <Button layoutX="22.0" layoutY="274.0" mnemonicParsing="false" onAction="#backToHomeOnAction" text="Bact to Home" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

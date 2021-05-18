@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.AircraftTroubleShootController">
+   <children>
+      <Text layoutX="232.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aircraft Troubleshoot">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <TableView layoutX="71.0" layoutY="94.0" prefHeight="200.0" prefWidth="605.0">
+         <columns>
+            <TableColumn prefWidth="133.99996948242188" text="Model No" />
+            <TableColumn prefWidth="139.3333740234375" text="Aircraft Name" />
+            <TableColumn prefWidth="94.66668701171875" text="Emergencey" />
+            <TableColumn minWidth="6.6666259765625" prefWidth="161.33331298828125" text="Not Emergency" />
+            <TableColumn onEditCommit="#changeSolvedCellEvent" prefWidth="75.0" text="Solved" />
+         </columns>
+      </TableView>
+      <HBox layoutX="67.0" layoutY="302.0" prefHeight="44.0" prefWidth="605.0" spacing="10.0">
+         <children>
+            <TextField fx:id="modelNameTextField" promptText="Enter model name" />
+            <TextField fx:id="aircraftNameTextField" prefHeight="25.0" prefWidth="167.0" promptText="Enter aircraft name" />
+            <TextField fx:id="emergencyTroubleshootTextField" prefHeight="25.0" prefWidth="115.0" promptText="Emergency" />
+            <TextField fx:id="notEmergencytextField" prefHeight="25.0" prefWidth="142.0" promptText="Not Emergency" />
+         </children>
+      </HBox>
+      <Button layoutX="603.0" layoutY="346.0" mnemonicParsing="false" onAction="#addNewButtonOnAction" text="Add a new" />
+      <HBox layoutX="77.0" layoutY="404.0" prefHeight="52.0" prefWidth="605.0" spacing="371.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

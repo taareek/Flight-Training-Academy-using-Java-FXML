@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="333.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.FXMLDocumentController">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Text fill="#a42d09" layoutX="65.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLIGHT TRAINING ACADEMY">
+         <font>
+            <Font name="Maiandra GD" size="29.0" />
+         </font>
+      </Text>
+      <VBox layoutX="61.0" layoutY="75.0" prefHeight="246.0" prefWidth="209.0" spacing="15.0">
+         <children>
+            <Text fill="#8713ca" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your user type:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="studentRadioButton" mnemonicParsing="false" onAction="#userRadioButtonOnAction" text="Student" />
+            <RadioButton fx:id="flightInstructorRadioButton" mnemonicParsing="false" onAction="#userRadioButtonOnAction" text="Flight Instructor" />
+            <RadioButton fx:id="headOfTrainingRadioButton" mnemonicParsing="false" onAction="#userRadioButtonOnAction" text="Head Of Training" />
+            <RadioButton fx:id="aircraftMaintenanceEngineerRadioButton" mnemonicParsing="false" onAction="#userRadioButtonOnAction" text="Aircraft Maintenance Engineer" />
+            <RadioButton fx:id="adminRadioButton" mnemonicParsing="false" onAction="#userRadioButtonOnAction" text="Admin and Accounts" />
+            <Label fx:id="userTypeLabelButton" prefHeight="42.0" prefWidth="211.0" text=" " />
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="316.0" layoutY="102.0" prefHeight="69.0" prefWidth="117.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your ID:" />
+            <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your Password:" wrappingWidth="117.12890625" />
+         </children>
+      </VBox>
+      <VBox layoutX="441.0" layoutY="98.0" prefHeight="165.0" prefWidth="129.0" spacing="10.0">
+         <children>
+            <TextField fx:id="userIdText" />
+            <TextField fx:id="userPasswordText" layoutX="10.0" layoutY="10.0" />
+            <Button fx:id="logInButtonOnClick" mnemonicParsing="false" onAction="#logInButtonOnClickOnAction" prefHeight="25.0" prefWidth="132.0" text="Log In" textFill="#610303" />
+            <Button fx:id="goToregisterButton" mnemonicParsing="false" onAction="#goToRegisterButtonOnAction" prefHeight="25.0" prefWidth="129.0" text="Go to Register Page" textFill="#6f0808" />
+         </children>
+      </VBox>
+      <Label fx:id="errorLabel" layoutX="315.0" layoutY="171.0" onDragDetected="#errorLabelOnAction" prefHeight="156.0" prefWidth="117.0" text=" " />
+   </children>
+</AnchorPane>

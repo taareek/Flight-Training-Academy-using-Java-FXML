@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypkg.FinancialRecordsController">
+   <children>
+      <Text layoutX="175.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Financial Records">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Text>
+      <HBox layoutX="45.0" layoutY="99.0" prefHeight="112.0" prefWidth="358.0">
+         <children>
+            <VBox prefHeight="115.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Income: " />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Expenses: " />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Balnce: " />
+               </children>
+            </VBox>
+            <VBox prefHeight="140.0" prefWidth="223.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="incomeTextFIeld" />
+                  <TextField fx:id="expensesTextField" />
+                  <TextField fx:id="balanceTextField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="312.0" layoutY="211.0" mnemonicParsing="false" onAction="#submitButtonOnAction" text="Submit" />
+      <HBox layoutX="35.0" layoutY="266.0" prefHeight="39.0" prefWidth="378.0" spacing="100.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goBackToMainSceneOnClick" text="Go Back To Your Main Scene" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Log Out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
